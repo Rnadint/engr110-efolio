@@ -14,6 +14,7 @@ import {
   ChevronRight,
   Target,
   Users,
+  Beaker,
 } from "lucide-react";
 
 const PROJECT_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663400044455/bp2s8LMMAEXrBB76Y8qTTz/project-banner-VQ9vmScthMD38bFhUXyjB9.webp";
@@ -82,6 +83,14 @@ const subPages = [
     path: "/project/team-contract",
     desc: "Our team agreements, collaboration norms, shared values, and decision-making processes.",
     tag: "Team Agreements",
+  },
+  {
+    icon: Beaker,
+    label: "09",
+    title: "Experimental Design",
+    path: "/project/experimental-design",
+    desc: "Survey methodology, testing protocol, and data collection strategy for our community needs assessment.",
+    tag: "Research Design",
   },
 ];
 

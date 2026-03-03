@@ -27,6 +27,7 @@ import {
 import Brainstorming from "./pages/Brainstorming";
 import ProjectRequirements from "./pages/ProjectRequirements";
 import TeamContract from "./pages/TeamContract";
+import ExperimentalDesign from "./pages/ExperimentalDesign";
 
 function Router() {
   return (
@@ -44,6 +45,7 @@ function Router() {
       <Route path="/project/brainstorming" component={Brainstorming} />
       <Route path="/project/requirements" component={ProjectRequirements} />
       <Route path="/project/team-contract" component={TeamContract} />
+      <Route path="/project/experimental-design" component={ExperimentalDesign} />
       <Route path="/contact" component={Contact} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
