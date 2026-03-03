@@ -116,9 +116,17 @@ const activities = [
     week: "Week 7",
     date: "Feb 17–21",
     title: "Backend-Frontend Integration & Refinement",
-    status: "in-progress",
-    desc: "Integrating backend API with React frontend dashboard. Implementing data flow from Google Forms to Google Sheets to FastAPI to dashboard visualization. Creating data pipeline diagram for non-technical audience understanding. Refining UI based on feedback to ensure clarity and accessibility. Preparing for website integration into Valley Verde's WIX platform.",
+    status: "complete",
+    desc: "Integrated backend API with React frontend dashboard. Implemented data flow from Google Forms to Google Sheets to FastAPI to dashboard visualization. Created data pipeline diagram for non-technical audience understanding. Refined UI based on feedback to ensure clarity and accessibility. Prepared for website integration into Valley Verde's WIX platform.",
     deliverable: "Integrated Dashboard, Data Pipeline Diagram, UI Refinements",
+  },
+  {
+    week: "Week 8",
+    date: "Feb 24–28",
+    title: "Final Report Draft & Heatmap Visualization",
+    status: "in-progress",
+    desc: "Completed full draft of final project report with comprehensive documentation of design process, findings, and recommendations. Contributed frontend development sections detailing UI/UX decisions, data visualization implementation, and accessibility features. Created interactive heatmap visualization showing food insecurity by zip code across Santa Clara County. Integrated heatmap with dashboard showing geographic distribution of food needs. Implemented backend API endpoints for data aggregation and filtering. Refined dashboard based on partner feedback: added demographic breakdowns, time-series trend analysis, and downloadable PDF reports. Connected frontend prototype with production backend API. Documented all technical decisions and created handoff documentation for Valley Verde staff.",
+    deliverable: "Final Report Draft, Heatmap Visualization, Integrated Dashboard, API Documentation",
   }
 ];
 

@@ -92,6 +92,14 @@ const subPages = [
     desc: "Survey methodology, testing protocol, and data collection strategy for our community needs assessment.",
     tag: "Research Design",
   },
+  {
+    icon: BarChart3,
+    label: "10",
+    title: "Data Visualization",
+    path: "/project/data-visualization",
+    desc: "Interactive heatmaps, dashboard mockups, and data analysis visualizations showcasing food insecurity patterns across Santa Clara County.",
+    tag: "Analytics",
+  },
 ];
 
 export default function ProjectOverview() {
