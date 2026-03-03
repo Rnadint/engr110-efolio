@@ -67,41 +67,41 @@ const activities = [
   {
     week: "Week 1",
     date: "Jan 6–10",
-    title: "Team Formation & Kickoff",
+    title: "Course Kickoff & Orientation",
     status: "complete",
-    desc: "Met as a team of five: Shibo (Web Design), Conner (CS), Irene (CS), Anushri (ECE), and Lily (Economics). Established communication norms, assigned roles, and reviewed ENGR 110 expectations. Began background research on Valley Verde and urban agriculture initiatives.",
-    deliverable: "Team Charter & Initial Research",
+    desc: "Attended ENGR 110 course introduction and learned about the design process framework. Reviewed project expectations, timeline, and deliverables. Prepared for team formation.",
+    deliverable: "Course Materials & Expectations",
   },
   {
     week: "Week 2",
     date: "Jan 13–17",
-    title: "Problem Discovery",
+    title: "Team Formation & Partner Introduction",
     status: "complete",
-    desc: "Initial stakeholder interviews, secondary research on problem domain. Identified key pain points and opportunity areas.",
-    deliverable: "Problem Statement Draft",
+    desc: "Met as a team of five: Shibo (Web Design), Conner (CS), Irene (CS), Anushri (ECE), and Lily (Economics). Established communication norms, assigned roles, and reviewed team expectations. First meeting with Valley Verde — toured facilities, observed workflows, and gathered initial requirements. Began background research on food security and urban agriculture.",
+    deliverable: "Team Charter & Partner Meeting Notes",
   },
   {
     week: "Week 3",
     date: "Jan 20–24",
-    title: "Partner Introduction",
+    title: "Ideation & Brainstorming",
     status: "complete",
-    desc: "First meeting with community partner. Toured facilities, observed workflows, and gathered primary requirements.",
-    deliverable: "Partner Meeting Notes",
+    desc: "Conducted structured brainstorming sessions with the full team. Generated 30+ diverse concepts across multiple categories: data visualization dashboards, website platforms, AI-powered tools, and interactive maps. Evaluated ideas based on feasibility, impact, and alignment with Valley Verde's mission. Narrowed to top 2-3 promising directions for further development.",
+    deliverable: "Brainstorm Documentation & Concept Ideas",
   },
   {
     week: "Week 4",
     date: "Jan 27–31",
-    title: "Ideation & Brainstorming",
+    title: "Requirements Definition & Concept Selection",
     status: "complete",
-    desc: "Conducted structured brainstorming sessions. Generated 30+ concepts and narrowed to 5 promising directions.",
-    deliverable: "Concept Sketches",
+    desc: "Defined project requirements using SMART framework. Selected two primary solution directions: (1) Google Form survey platform with data collection, and (2) Website with interactive visualizations and data analytics. Developed comprehensive survey questions to gather community food security data.",
+    deliverable: "Project Requirements & Survey Design",
   },
   {
     week: "Week 5",
     date: "Feb 3–7",
     title: "Concept Development",
     status: "in-progress",
-    desc: "Developing top 3 concepts in detail. Creating initial prototypes and preparing for user testing.",
+    desc: "Developing top 2 concepts in detail. Creating initial prototypes and preparing for user testing with Valley Verde staff and community members.",
     deliverable: "Prototype v0.1",
   },
   {
@@ -109,13 +109,14 @@ const activities = [
     date: "Feb 10–14",
     title: "Testing & Iteration",
     status: "upcoming",
-    desc: "User testing sessions with partner and stakeholders. Collect feedback and iterate on designs.",
-    deliverable: "Testing Report",
+    desc: "User testing sessions with partner and stakeholders. Collect feedback and iterate on designs based on community input.",
+    deliverable: "Testing Report & Feedback Analysis",
   },
 ];
 
 export function TeamActivities() {
   const revealRef = useScrollReveal();
+
   return (
     <div className="min-h-screen" ref={revealRef}>
       <PageHeader
@@ -128,118 +129,109 @@ export function TeamActivities() {
       <section className="py-24" style={{ background: "var(--ivory)" }}>
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="reveal mb-12">
-              <div className="section-label mb-4">Activity Log</div>
+            <div className="text-center mb-12 reveal">
+              <div className="section-label mb-4">Progress Overview</div>
               <h2
-                className="font-bold mb-4"
-                style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", color: "var(--navy)" }}
+                className="font-bold"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.2rem)",
+                  color: "var(--navy)",
+                }}
               >
                 Weekly Progress
               </h2>
-              <div className="amber-rule" />
             </div>
 
-            {/* Summary Stats */}
-            <div className="grid grid-cols-3 gap-4 mb-12 reveal">
+            <div className="grid grid-cols-3 gap-4 mb-12">
               {[
-                { label: "Activities Completed", value: "4", icon: CheckCircle2 },
-                { label: "In Progress", value: "1", icon: Clock },
-                { label: "Upcoming", value: "1", icon: Calendar },
-              ].map((stat) => {
-                const Icon = stat.icon;
-                return (
+                { label: "Completed", count: activities.filter((a) => a.status === "complete").length },
+                { label: "In Progress", count: activities.filter((a) => a.status === "in-progress").length },
+                { label: "Upcoming", count: activities.filter((a) => a.status === "upcoming").length },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="reveal rounded-lg p-6 text-center"
+                  style={{ background: "white", border: "1px solid rgba(15,32,68,0.08)" }}
+                >
                   <div
-                    key={stat.label}
-                    className="rounded-lg p-5 text-center"
-                    style={{ background: "white", boxShadow: "0 4px 16px rgba(15,32,68,0.07)" }}
+                    className="text-3xl font-bold mb-2"
+                    style={{ color: "var(--navy)", fontFamily: "'Playfair Display', serif" }}
                   >
-                    <Icon size={24} className="mx-auto mb-2" style={{ color: "var(--amber)" }} />
-                    <div
-                      className="text-2xl font-bold"
-                      style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)" }}
-                    >
-                      {stat.value}
-                    </div>
-                    <div className="text-xs" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}>
-                      {stat.label}
-                    </div>
+                    {stat.count}
                   </div>
-                );
-              })}
+                  <div style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.9rem" }}>
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Timeline */}
             <div className="space-y-6">
               {activities.map((act, i) => (
                 <div
                   key={i}
-                  className="timeline-item reveal"
-                  style={{ transitionDelay: `${i * 0.08}s` }}
+                  className="reveal rounded-lg p-8 border-l-4"
+                  style={{
+                    transitionDelay: `${i * 0.05}s`,
+                    background: "white",
+                    borderLeftColor: act.status === "complete" ? "var(--amber)" : act.status === "in-progress" ? "#3B82F6" : "var(--slate)",
+                    boxShadow: "0 2px 12px rgba(15,32,68,0.05)",
+                  }}
                 >
-                  <div
-                    className="rounded-lg p-6 ml-4"
-                    style={{
-                      background: "white",
-                      boxShadow: "0 4px 16px rgba(15,32,68,0.07)",
-                      borderLeft: act.status === "complete"
-                        ? "4px solid var(--amber)"
-                        : act.status === "in-progress"
-                        ? "4px solid #3B82F6"
-                        : "4px solid #E5E7EB",
-                    }}
-                  >
-                    <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
-                      <div>
-                        <span
-                          className="text-xs font-bold uppercase tracking-wider mr-3"
-                          style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
-                        >
-                          {act.week}
-                        </span>
-                        <span
-                          className="text-xs"
-                          style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
-                        >
-                          {act.date}
-                        </span>
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <div>
+                      <div
+                        className="text-sm font-bold uppercase tracking-wider mb-1"
+                        style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        {act.week}
                       </div>
                       <span
-                        className="text-xs font-semibold px-2 py-1 rounded"
-                        style={{
-                          background: act.status === "complete"
+                        className="text-xs font-semibold"
+                        style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        {act.date}
+                      </span>
+                    </div>
+                    <span
+                      className="text-xs font-semibold px-2 py-1 rounded"
+                      style={{
+                        background:
+                          act.status === "complete"
                             ? "rgba(245,158,11,0.12)"
                             : act.status === "in-progress"
                             ? "rgba(59,130,246,0.12)"
                             : "rgba(100,116,139,0.1)",
-                          color: act.status === "complete"
+                        color:
+                          act.status === "complete"
                             ? "var(--amber)"
                             : act.status === "in-progress"
                             ? "#3B82F6"
                             : "var(--slate)",
-                          fontFamily: "'Source Sans 3', sans-serif",
-                        }}
-                      >
-                        {act.status === "complete" ? "✓ Complete" : act.status === "in-progress" ? "● In Progress" : "○ Upcoming"}
-                      </span>
-                    </div>
-                    <h3
-                      className="font-bold mb-2"
-                      style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)", fontSize: "1.1rem" }}
+                        fontFamily: "'Source Sans 3', sans-serif",
+                      }}
                     >
-                      {act.title}
-                    </h3>
-                    <p
-                      className="text-sm leading-relaxed mb-3"
-                      style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
-                    >
-                      {act.desc}
-                    </p>
-                    <div
-                      className="text-xs font-semibold"
-                      style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
-                    >
-                      Deliverable: <span style={{ color: "var(--amber)" }}>{act.deliverable}</span>
-                    </div>
+                      {act.status === "complete" ? "✓ Complete" : act.status === "in-progress" ? "● In Progress" : "○ Upcoming"}
+                    </span>
+                  </div>
+                  <h3
+                    className="font-bold mb-2"
+                    style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)", fontSize: "1.1rem" }}
+                  >
+                    {act.title}
+                  </h3>
+                  <p
+                    className="text-sm leading-relaxed mb-3"
+                    style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
+                  >
+                    {act.desc}
+                  </p>
+                  <div
+                    className="text-xs font-semibold"
+                    style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
+                  >
+                    Deliverable: <span style={{ color: "var(--amber)" }}>{act.deliverable}</span>
                   </div>
                 </div>
               ))}
@@ -349,16 +341,13 @@ export function AboutPartner() {
                   Design Challenge Statement
                 </h3>
                 <p className="leading-relaxed mb-6" style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "1.05rem", color: "var(--slate)" }}>
-                  <strong style={{ color: "var(--navy)" }}>How might we</strong> design a solution
-                  that helps our partner organization streamline their intake process, reduce
-                  administrative burden on staff, and improve the overall client experience —
-                  within the constraints of a limited budget and existing infrastructure?
+                  <strong style={{ color: "var(--navy)" }}>How might we</strong> design a solution that enhances Valley Verde's community impact, improves engagement with underserved populations, and helps them scale their food justice mission?
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
-                    { label: "Primary Users", value: "Community Members Staff & Clients Staff" },
-                    { label: "Key Constraint", value: "Sustainable Low-cost Solution Low-cost" },
-                    { label: "Success Metric", value: "Community Impact Time Saved / Satisfaction Reach" },
+                    { label: "Primary Users", value: "Community Members & Staff" },
+                    { label: "Key Constraint", value: "Sustainable & Low-cost" },
+                    { label: "Success Metric", value: "Community Impact & Reach" },
                   ].map((item) => (
                     <div
                       key={item.label}
@@ -392,149 +381,112 @@ const ganttTasks = [
   { task: "Concept Development", start: 4, duration: 3, category: "Design" },
   { task: "Prototyping", start: 5, duration: 3, category: "Build" },
   { task: "User Testing", start: 6, duration: 2, category: "Testing" },
-  { task: "Iteration & Refinement", start: 7, duration: 2, category: "Design" },
-  { task: "Final Prototype", start: 8, duration: 1, category: "Build" },
-  { task: "Documentation & Report", start: 7, duration: 3, category: "Planning" },
-  { task: "Final Presentation", start: 9, duration: 1, category: "Delivery" },
+  { task: "Refinement & Iteration", start: 7, duration: 2, category: "Build" },
+  { task: "Final Documentation", start: 8, duration: 2, category: "Documentation" },
 ];
-
-const categoryColors: Record<string, string> = {
-  Planning: "#0F2044",
-  Research: "#3B82F6",
-  Partner: "#F59E0B",
-  Design: "#10B981",
-  Build: "#8B5CF6",
-  Testing: "#EF4444",
-  Delivery: "#F59E0B",
-};
-
-const weeks = Array.from({ length: 10 }, (_, i) => `Wk ${i + 1}`);
 
 export function GanttChart() {
   const revealRef = useScrollReveal();
+
+  const categoryColors: Record<string, string> = {
+    Planning: "var(--amber)",
+    Research: "#3B82F6",
+    Partner: "#10B981",
+    Design: "#8B5CF6",
+    Build: "#F59E0B",
+    Testing: "#EF4444",
+    Documentation: "var(--navy)",
+  };
+
   return (
     <div className="min-h-screen" ref={revealRef}>
       <PageHeader
-        label="Project · Timeline"
-        title="Gantt Chart"
-        subtitle="A visual overview of our project timeline, showing task dependencies, milestones, and the overall schedule."
+        label="Project · Gantt Chart"
+        title="Project Timeline"
+        subtitle="Visual representation of our project schedule, milestones, and task dependencies."
         bgImage={PROJECT_BG}
       />
       <ProjectSubNav current="/project/gantt-chart" />
       <section className="py-24" style={{ background: "var(--ivory)" }}>
         <div className="container">
           <div className="max-w-5xl mx-auto">
-            <div className="reveal mb-10">
-              <div className="section-label mb-4">Project Timeline</div>
+            <div className="mb-12 reveal">
+              <div className="section-label mb-4">10-Week Timeline</div>
               <h2
-                className="font-bold mb-4"
-                style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", color: "var(--navy)" }}
-              >
-                10-Week Project Schedule
-              </h2>
-              <div className="amber-rule mb-6" />
-              <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)", fontSize: "1rem" }}>
-                This Gantt chart illustrates the planned timeline for our ENGR 110 design project.
-                Tasks are color-coded by category to show the flow of work across the quarter.
-              </p>
-            </div>
-
-            {/* Legend */}
-            <div className="flex flex-wrap gap-3 mb-8 reveal">
-              {Object.entries(categoryColors).map(([cat, color]) => (
-                <div key={cat} className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-sm" style={{ background: color }} />
-                  <span className="text-xs font-semibold" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}>
-                    {cat}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Gantt Grid */}
-            <div
-              className="rounded-lg overflow-hidden reveal"
-              style={{ boxShadow: "0 4px 24px rgba(15,32,68,0.1)", background: "white" }}
-            >
-              {/* Header */}
-              <div
-                className="grid"
+                className="font-bold mb-6"
                 style={{
-                  gridTemplateColumns: "200px repeat(10, 1fr)",
-                  background: "var(--navy)",
-                  padding: "0.75rem 1rem",
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.2rem)",
+                  color: "var(--navy)",
                 }}
               >
-                <div
-                  className="text-xs font-bold uppercase tracking-wider"
-                  style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
-                >
-                  Task
-                </div>
-                {weeks.map((w) => (
-                  <div
-                    key={w}
-                    className="text-xs font-semibold text-center"
-                    style={{ color: "rgba(250,250,247,0.7)", fontFamily: "'Source Sans 3', sans-serif" }}
-                  >
-                    {w}
-                  </div>
-                ))}
-              </div>
-
-              {/* Rows */}
-              {ganttTasks.map((task, i) => (
-                <div
-                  key={i}
-                  className="grid items-center"
-                  style={{
-                    gridTemplateColumns: "200px repeat(10, 1fr)",
-                    padding: "0.5rem 1rem",
-                    background: i % 2 === 0 ? "white" : "rgba(15,32,68,0.02)",
-                    borderBottom: "1px solid rgba(15,32,68,0.05)",
-                  }}
-                >
-                  <div
-                    className="text-xs font-semibold pr-3"
-                    style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
-                  >
-                    {task.task}
-                  </div>
-                  {weeks.map((_, wi) => {
-                    const inRange = wi >= task.start && wi < task.start + task.duration;
-                    const isFirst = wi === task.start;
-                    const isLast = wi === task.start + task.duration - 1;
-                    return (
-                      <div key={wi} className="h-7 px-0.5 flex items-center">
-                        {inRange && (
-                          <div
-                            className="h-5 w-full"
-                            style={{
-                              background: categoryColors[task.category],
-                              borderRadius: isFirst && isLast
-                                ? "4px"
-                                : isFirst
-                                ? "4px 0 0 4px"
-                                : isLast
-                                ? "0 4px 4px 0"
-                                : "0",
-                              opacity: 0.85,
-                            }}
-                          />
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              ))}
+                Project Schedule
+              </h2>
+              <div className="amber-rule" />
             </div>
 
-            <p
-              className="mt-4 text-xs text-center reveal"
-              style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
-            >
-              * Timeline is subject to adjustment based on project needs and partner availability.
-            </p>
+            <div className="reveal rounded-lg overflow-hidden" style={{ background: "white", boxShadow: "0 4px 24px rgba(15,32,68,0.08)" }}>
+              <div className="overflow-x-auto">
+                <div className="min-w-max p-8">
+                  {/* Header */}
+                  <div className="flex gap-2 mb-6">
+                    <div style={{ width: "200px", minWidth: "200px" }}>
+                      <div className="text-xs font-bold uppercase" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                        Task
+                      </div>
+                    </div>
+                    {Array.from({ length: 10 }).map((_, i) => (
+                      <div key={i} className="w-12 text-center">
+                        <div className="text-xs font-bold" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                          W{i + 1}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Tasks */}
+                  {ganttTasks.map((task, i) => (
+                    <div key={i} className="flex gap-2 mb-4 items-center">
+                      <div style={{ width: "200px", minWidth: "200px" }}>
+                        <div className="text-sm font-semibold" style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                          {task.task}
+                        </div>
+                      </div>
+                      {Array.from({ length: 10 }).map((_, weekIdx) => {
+                        const isActive = weekIdx >= task.start && weekIdx < task.start + task.duration;
+                        return (
+                          <div
+                            key={weekIdx}
+                            className="w-12 h-8 rounded"
+                            style={{
+                              background: isActive ? categoryColors[task.category] : "rgba(15,32,68,0.04)",
+                              border: isActive ? `2px solid ${categoryColors[task.category]}` : "1px solid rgba(15,32,68,0.1)",
+                            }}
+                          />
+                        );
+                      })}
+                    </div>
+                  ))}
+
+                  {/* Legend */}
+                  <div className="mt-8 pt-6" style={{ borderTop: "1px solid rgba(15,32,68,0.1)" }}>
+                    <div className="text-xs font-bold uppercase mb-4" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                      Categories
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {Object.entries(categoryColors).map(([cat, color]) => (
+                        <div key={cat} className="flex items-center gap-2">
+                          <div className="w-4 h-4 rounded" style={{ background: color }} />
+                          <span className="text-xs" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                            {cat}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -545,136 +497,105 @@ export function GanttChart() {
 /* ─── Progress Meetings ─── */
 const meetings = [
   {
-    date: "January 8, 2025",
-    type: "Team Meeting",
-    attendees: "Full Team",
-    agenda: "Team formation, role assignments, review of course expectations and project scope.",
-    decisions: "Agreed on communication channels (Slack + weekly in-person). Assigned team lead.",
-    nextSteps: "Complete team charter by Week 2.",
+    week: "Week 2",
+    date: "Jan 15",
+    title: "First Partner Meeting",
+    attendees: "Full team + Valley Verde staff",
+    notes: "Toured facilities, discussed current operations, identified key stakeholders and pain points.",
+    outcomes: ["Facility tour completed", "Stakeholder list created", "Initial requirements gathered"],
   },
   {
-    date: "January 15, 2025",
-    type: "Partner Meeting",
-    attendees: "Full Team + Partner",
-    agenda: "Introduction to partner organization, facility tour, initial requirements gathering.",
-    decisions: "Identified three key problem areas. Agreed on bi-weekly check-in schedule.",
-    nextSteps: "Conduct secondary research on problem domain. Prepare interview questions.",
+    week: "Week 3",
+    date: "Jan 22",
+    title: "Brainstorm Debrief",
+    attendees: "Full team",
+    notes: "Reviewed all 30+ brainstorm ideas, discussed feasibility and impact, selected top concepts.",
+    outcomes: ["Ideas documented", "Top 3 concepts selected", "Evaluation criteria defined"],
   },
   {
-    date: "January 22, 2025",
-    type: "Team Meeting",
-    attendees: "Full Team",
-    agenda: "Research synthesis, problem statement refinement, ideation preparation.",
-    decisions: "Finalized problem statement. Selected top 3 research insights to guide ideation.",
-    nextSteps: "Conduct brainstorming session. Generate 30+ concepts.",
-  },
-  {
-    date: "January 29, 2025",
-    type: "Partner Check-in",
-    attendees: "Team Lead + Partner",
-    agenda: "Share initial concepts, gather feedback, clarify constraints.",
-    decisions: "Partner preferred concepts 1 and 3. Budget constraint confirmed at $500.",
-    nextSteps: "Develop concepts 1 and 3 in detail. Prepare rough prototypes.",
-  },
-  {
-    date: "February 5, 2025",
-    type: "Team Meeting",
-    attendees: "Full Team",
-    agenda: "Prototype review, testing plan development, task assignments.",
-    decisions: "Prototype v0.1 approved for user testing. Testing scheduled for Week 6.",
-    nextSteps: "Finalize prototype. Recruit 5 test participants from partner organization.",
+    week: "Week 4",
+    date: "Jan 29",
+    title: "Requirements Review",
+    attendees: "Full team",
+    notes: "Defined SMART project requirements, finalized survey questions, planned data collection approach.",
+    outcomes: ["Requirements document", "Survey finalized", "Data collection plan"],
   },
 ];
 
 export function ProgressMeetings() {
   const revealRef = useScrollReveal();
+
   return (
     <div className="min-h-screen" ref={revealRef}>
       <PageHeader
-        label="Project · Meeting Records"
+        label="Project · Progress Meetings"
         title="Progress Meetings"
-        subtitle="Documented records of team meetings and partner check-ins, including agendas, decisions, and action items."
+        subtitle="Documentation of key team meetings, decisions, and outcomes throughout the project."
         bgImage={PROJECT_BG}
       />
       <ProjectSubNav current="/project/progress-meetings" />
       <section className="py-24" style={{ background: "var(--ivory)" }}>
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="reveal mb-12">
-              <div className="section-label mb-4">Meeting Log</div>
+            <div className="mb-12 reveal">
+              <div className="section-label mb-4">Meeting Records</div>
               <h2
-                className="font-bold mb-4"
-                style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", color: "var(--navy)" }}
+                className="font-bold"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.2rem)",
+                  color: "var(--navy)",
+                }}
               >
-                Meeting Records
+                Team & Partner Meetings
               </h2>
-              <div className="amber-rule mb-6" />
-              <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)", fontSize: "1rem" }}>
-                All team and partner meetings are documented here with agendas, key decisions, and next steps.
-              </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {meetings.map((meeting, i) => (
                 <div
                   key={i}
-                  className="reveal rounded-lg overflow-hidden"
+                  className="reveal rounded-lg p-8"
                   style={{
                     transitionDelay: `${i * 0.1}s`,
                     background: "white",
-                    boxShadow: "0 4px 20px rgba(15,32,68,0.08)",
+                    boxShadow: "0 4px 24px rgba(15,32,68,0.08)",
                   }}
                 >
-                  {/* Meeting Header */}
-                  <div
-                    className="px-6 py-4 flex flex-wrap items-center justify-between gap-3"
-                    style={{ background: "var(--navy)" }}
-                  >
+                  <div className="flex items-start justify-between gap-4 mb-4">
                     <div>
-                      <div
-                        className="text-xs font-bold uppercase tracking-wider mb-1"
-                        style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
-                      >
-                        {meeting.type}
+                      <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                        {meeting.week} • {meeting.date}
                       </div>
-                      <div
-                        className="font-bold"
-                        style={{ fontFamily: "'Playfair Display', serif", color: "var(--ivory)", fontSize: "1.05rem" }}
-                      >
-                        {meeting.date}
-                      </div>
-                    </div>
-                    <div
-                      className="flex items-center gap-2 text-xs px-3 py-1.5 rounded"
-                      style={{ background: "rgba(245,158,11,0.15)", color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif", fontWeight: 600 }}
-                    >
-                      <Users size={13} />
-                      {meeting.attendees}
+                      <h3 className="font-bold" style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)", fontSize: "1.2rem" }}>
+                        {meeting.title}
+                      </h3>
                     </div>
                   </div>
-
-                  {/* Meeting Body */}
-                  <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {[
-                      { label: "Agenda", content: meeting.agenda },
-                      { label: "Key Decisions", content: meeting.decisions },
-                      { label: "Next Steps", content: meeting.nextSteps },
-                    ].map((section) => (
-                      <div key={section.label}>
-                        <div
-                          className="text-xs font-bold uppercase tracking-wider mb-2"
-                          style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
-                        >
-                          {section.label}
-                        </div>
-                        <p
-                          className="text-sm leading-relaxed"
-                          style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
-                        >
-                          {section.content}
-                        </p>
-                      </div>
-                    ))}
+                  <div className="mb-4">
+                    <div className="text-xs font-semibold mb-2" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif", textTransform: "uppercase" }}>
+                      Attendees
+                    </div>
+                    <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)" }}>{meeting.attendees}</p>
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-xs font-semibold mb-2" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif", textTransform: "uppercase" }}>
+                      Notes
+                    </div>
+                    <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)" }}>{meeting.notes}</p>
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold mb-3" style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif", textTransform: "uppercase" }}>
+                      Outcomes
+                    </div>
+                    <ul className="space-y-2">
+                      {meeting.outcomes.map((outcome, j) => (
+                        <li key={j} className="flex items-start gap-2">
+                          <CheckCircle2 size={16} style={{ color: "var(--amber)", marginTop: "2px", flexShrink: 0 }} />
+                          <span style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)" }}>{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
@@ -687,123 +608,95 @@ export function ProgressMeetings() {
 }
 
 /* ─── Reflections ─── */
-const reflections = [
-  {
-    week: "Week 1–2",
-    title: "Finding Our Footing",
-    theme: "Team Dynamics",
-    content: "The first two weeks were about getting to know each other and establishing how we would work together. I was surprised by how different our communication styles were — something that initially felt like a challenge became a strength once we learned to leverage our differences. The team charter exercise was more valuable than I expected; putting our norms in writing gave us something to return to when tensions arose.",
-    learning: "Effective teams are built on explicit agreements, not assumed understanding.",
-  },
-  {
-    week: "Week 3",
-    title: "Meeting the Real World",
-    theme: "Partner Engagement",
-    content: "Our first visit to the partner organization was humbling. The problems we had theorized about in class looked very different in practice. I realized how much I had been designing in the abstract — without truly understanding the context. The facility tour forced me to confront the gap between textbook engineering and real-world constraints.",
-    learning: "Empathy requires presence. You cannot fully understand a problem without experiencing it firsthand.",
-  },
-  {
-    week: "Week 4",
-    title: "The Messy Middle of Ideation",
-    theme: "Creative Process",
-    content: "Brainstorming was simultaneously exhilarating and frustrating. I came in with ideas I was attached to, and the structured process forced me to let them go and explore more broadly. The best concept we generated came from a team member whose background I had initially underestimated. This was a lesson in intellectual humility.",
-    learning: "The best ideas rarely come from the most confident voice in the room.",
-  },
-  {
-    week: "Week 5",
-    title: "From Concept to Prototype",
-    theme: "Design Iteration",
-    content: "Building the first prototype revealed assumptions we didn't know we were making. What seemed simple on paper required three iterations to get right. I am learning to embrace imperfection in early prototypes — they are tools for learning, not finished products. The faster we can make something tangible, the faster we can discover what doesn't work.",
-    learning: "A prototype is a question made physical. Build to learn, not to impress.",
-  },
-];
-
 export function Reflections() {
   const revealRef = useScrollReveal();
+
+  const reflections = [
+    {
+      week: "Week 2",
+      title: "First Impressions of Valley Verde",
+      reflection: "Meeting the Valley Verde team was eye-opening. Their passion for food justice and community empowerment is inspiring. We realized that our solution needs to be deeply rooted in understanding their current workflows and constraints.",
+      learning: "Community-centered design starts with listening",
+    },
+    {
+      week: "Week 3",
+      title: "The Power of Brainstorming",
+      reflection: "Our brainstorming session generated so many diverse ideas. It was valuable to see how each team member brought their unique perspective — from web design to economics to electrical engineering. The variety of ideas reflects our team's multidisciplinary strength.",
+      learning: "Diversity of thought leads to better solutions",
+    },
+    {
+      week: "Week 4",
+      title: "Narrowing Down the Possibilities",
+      reflection: "Selecting between our top concepts was challenging. We had to make trade-offs between technical complexity, feasibility, and impact. This exercise taught us the importance of clear requirements and evaluation criteria.",
+      learning: "Good constraints lead to better decisions",
+    },
+  ];
+
   return (
     <div className="min-h-screen" ref={revealRef}>
       <PageHeader
-        label="Project · Personal Reflections"
+        label="Project · Reflections"
         title="Reflections"
-        subtitle="Personal reflections on the learning process — what I've discovered about engineering, teamwork, and myself."
+        subtitle="Personal insights, lessons learned, and key takeaways from the design process."
         bgImage={PROJECT_BG}
       />
       <ProjectSubNav current="/project/reflections" />
       <section className="py-24" style={{ background: "var(--ivory)" }}>
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="reveal mb-12">
+            <div className="mb-12 reveal">
               <div className="section-label mb-4">Learning Journal</div>
               <h2
-                className="font-bold mb-4"
-                style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", color: "var(--navy)" }}
+                className="font-bold"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.2rem)",
+                  color: "var(--navy)",
+                }}
               >
-                My Engineering Journey
+                Project Reflections
               </h2>
-              <div className="amber-rule mb-6" />
-              <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)", fontSize: "1rem" }}>
-                These reflections capture my personal growth throughout the ENGR 110 design process —
-                the moments of insight, struggle, and discovery that shaped my understanding of engineering.
-              </p>
             </div>
 
-            <div className="space-y-10">
-              {reflections.map((ref, i) => (
+            <div className="space-y-8">
+              {reflections.map((item, i) => (
                 <div
                   key={i}
-                  className="reveal"
-                  style={{ transitionDelay: `${i * 0.1}s` }}
+                  className="reveal rounded-lg p-8"
+                  style={{
+                    transitionDelay: `${i * 0.1}s`,
+                    background: "white",
+                    boxShadow: "0 4px 24px rgba(15,32,68,0.08)",
+                    borderLeft: "4px solid var(--amber)",
+                  }}
                 >
-                  <div
-                    className="rounded-lg overflow-hidden"
-                    style={{ background: "white", boxShadow: "0 4px 24px rgba(15,32,68,0.08)" }}
+                  <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                    {item.week}
+                  </div>
+                  <h3 className="font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)", fontSize: "1.2rem" }}>
+                    {item.title}
+                  </h3>
+                  <blockquote
+                    className="mb-6 pl-4 italic"
+                    style={{
+                      fontFamily: "'Source Sans 3', sans-serif",
+                      color: "var(--slate)",
+                      borderLeft: "2px solid var(--amber)",
+                      lineHeight: "1.6",
+                    }}
                   >
-                    {/* Header */}
-                    <div
-                      className="px-8 py-5 flex flex-wrap items-center justify-between gap-3"
-                      style={{ borderBottom: "1px solid rgba(15,32,68,0.06)" }}
-                    >
-                      <div>
-                        <span
-                          className="text-xs font-bold uppercase tracking-wider"
-                          style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
-                        >
-                          {ref.week}
-                        </span>
-                        <h3
-                          className="font-bold mt-1"
-                          style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)", fontSize: "1.3rem" }}
-                        >
-                          {ref.title}
-                        </h3>
-                      </div>
-                      <span
-                        className="text-xs font-semibold px-3 py-1.5 rounded"
-                        style={{
-                          background: "rgba(15,32,68,0.07)",
-                          color: "var(--navy)",
-                          fontFamily: "'Source Sans 3', sans-serif",
-                        }}
-                      >
-                        {ref.theme}
-                      </span>
+                    {item.reflection}
+                  </blockquote>
+                  <div
+                    className="p-4 rounded"
+                    style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.2)" }}
+                  >
+                    <div className="text-xs font-bold uppercase mb-2" style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}>
+                      Key Learning
                     </div>
-
-                    {/* Body */}
-                    <div className="px-8 py-6">
-                      <p
-                        className="leading-relaxed mb-6"
-                        style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "1.05rem", color: "var(--slate)" }}
-                      >
-                        {ref.content}
-                      </p>
-                      <div
-                        className="pull-quote"
-                        style={{ fontSize: "1rem" }}
-                      >
-                        {ref.learning}
-                      </div>
-                    </div>
+                    <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--navy)", fontWeight: 600 }}>
+                      {item.learning}
+                    </p>
                   </div>
                 </div>
               ))}

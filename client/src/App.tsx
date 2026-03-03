@@ -24,6 +24,9 @@ import {
   ProgressMeetings,
   Reflections,
 } from "./pages/ProjectPages";
+import Brainstorming from "./pages/Brainstorming";
+import ProjectRequirements from "./pages/ProjectRequirements";
+import TeamContract from "./pages/TeamContract";
 
 function Router() {
   return (
@@ -38,6 +41,9 @@ function Router() {
       <Route path="/project/gantt-chart" component={GanttChart} />
       <Route path="/project/progress-meetings" component={ProgressMeetings} />
       <Route path="/project/reflections" component={Reflections} />
+      <Route path="/project/brainstorming" component={Brainstorming} />
+      <Route path="/project/requirements" component={ProjectRequirements} />
+      <Route path="/project/team-contract" component={TeamContract} />
       <Route path="/contact" component={Contact} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />

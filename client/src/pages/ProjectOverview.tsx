@@ -12,6 +12,8 @@ import {
   MessageSquare,
   BookOpen,
   ChevronRight,
+  Target,
+  Users,
 } from "lucide-react";
 
 const PROJECT_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663400044455/bp2s8LMMAEXrBB76Y8qTTz/project-banner-VQ9vmScthMD38bFhUXyjB9.webp";
@@ -56,6 +58,30 @@ const subPages = [
     path: "/project/reflections",
     desc: "Personal reflections on the learning process — insights on engineering, teamwork, and growth.",
     tag: "Learning Journal",
+  },
+  {
+    icon: ClipboardList,
+    label: "06",
+    title: "Brainstorming Process",
+    path: "/project/brainstorming",
+    desc: "Showcasing our team's creative ideation process — 30+ concepts generated, evaluated, and refined.",
+    tag: "Ideation",
+  },
+  {
+    icon: Target,
+    label: "07",
+    title: "Project Requirements",
+    path: "/project/requirements",
+    desc: "SMART goals, functional requirements, success metrics, and constraints for our solution.",
+    tag: "Requirements",
+  },
+  {
+    icon: Users,
+    label: "08",
+    title: "Team Contract",
+    path: "/project/team-contract",
+    desc: "Our team agreements, collaboration norms, shared values, and decision-making processes.",
+    tag: "Team Agreements",
   },
 ];
 
