@@ -50,37 +50,19 @@ export default function AboutMe() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
               {/* Photo Column */}
               <div className="lg:col-span-1 reveal">
-                {/* Professional Photo Placeholder */}
+                {/* Professional Photo */}
                 <div
                   className="relative rounded-lg overflow-hidden mb-6"
                   style={{
                     boxShadow: "0 16px 48px rgba(15,32,68,0.15)",
                     aspectRatio: "3/4",
-                    background: "linear-gradient(135deg, #e8e4dc 0%, #d4cfc5 100%)",
                   }}
                 >
-                  {/* Placeholder avatar */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <div
-                      className="w-28 h-28 rounded-full flex items-center justify-center mb-4"
-                      style={{ background: "var(--navy)" }}
-                    >
-                      <span
-                        className="text-5xl font-bold"
-                        style={{ fontFamily: "'Playfair Display', serif", color: "var(--amber)" }}
-                      >
-                        YN
-                      </span>
-                    </div>
-                    <p
-                      className="text-sm text-center px-4"
-                      style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
-                    >
-                      Professional Photo
-                      <br />
-                      <span className="text-xs opacity-60">(Replace with professional photo)</span>
-                    </p>
-                  </div>
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/user_upload_by_module/session_file/310519663400044455/VuSZSZmobwXehyIm.jpg?Expires=1804100425&Signature=pfU69waQCS94eRHHRwqTDLm-6VDm9nCjRUHri9RpGtvz6XWMrLAie3P~jJT9p9tpZp22VowgtxxqH49Hx1vXyH2HgQS2AsRtBJL-pDiycmRE0cEoJAZco~Uipnyk9qtJYDQEK5nex2HLnpoZCgatSSrHm~WnnphLF8ANqENmUTSSwpULUZ5CWzHhbFvrEfJGDtpyd8JszJam~eCJg9EgF31O-WytQ7zSXy5qHwgYj-Am7j1xZGN-HDqneto9STFwWcTD35ucUwFeggQlMbrvLIeIJB5-zDSNdghdz0OiTTPNWaIBvG238Lw4YvqNCTdMmlOf65HqrhFu1BGzaK2PLg__&Key-Pair-Id=K2HSFNDJXOU9YS"
+                    alt="Shibo's professional photo"
+                    className="w-full h-full object-cover"
+                  />
                   {/* Amber accent */}
                   <div
                     className="absolute bottom-0 left-0 right-0 h-1"
@@ -98,6 +80,7 @@ export default function AboutMe() {
                   }}
                 >
                   <dl className="space-y-3">
+<<<<<<< HEAD
                     {[
                       { label: "Name", value: "Shibo Cong" },
                       { label: "Major", value: "Web Design & Engineering" },
@@ -120,48 +103,106 @@ export default function AboutMe() {
                         </dd>
                       </div>
                     ))}
+=======
+                    <div>
+                      <dt
+                        className="text-xs font-bold uppercase tracking-wider"
+                        style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Name
+                      </dt>
+                      <dd
+                        className="text-sm font-semibold mt-1"
+                        style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Shibo Li
+                      </dd>
+                    </div>
+                    <div>
+                      <dt
+                        className="text-xs font-bold uppercase tracking-wider"
+                        style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Major
+                      </dt>
+                      <dd
+                        className="text-sm font-semibold mt-1"
+                        style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Web Design & Engineering
+                      </dd>
+                    </div>
+                    <div>
+                      <dt
+                        className="text-xs font-bold uppercase tracking-wider"
+                        style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Class
+                      </dt>
+                      <dd
+                        className="text-sm font-semibold mt-1"
+                        style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        SCU '26
+                      </dd>
+                    </div>
+                    <div>
+                      <dt
+                        className="text-xs font-bold uppercase tracking-wider"
+                        style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Location
+                      </dt>
+                      <dd
+                        className="text-sm font-semibold mt-1"
+                        style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Shanghai, China
+                      </dd>
+                    </div>
+>>>>>>> cf118cddfd24aba6a2158a1f0816b2afd5826984
                   </dl>
                 </div>
               </div>
 
-              {/* Bio Column */}
+              {/* Content Column */}
               <div className="lg:col-span-2">
-                <div className="reveal">
-                  <div className="section-label mb-4">Biography</div>
+                {/* Bio Section */}
+                <div className="mb-12 reveal">
+                  <div className="section-label mb-4">Introduction</div>
                   <h2
-                    className="font-bold mb-6 leading-tight"
+                    className="font-bold mb-6"
                     style={{
                       fontFamily: "'Playfair Display', serif",
-                      fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)",
+                      fontSize: "clamp(1.8rem, 3.5vw, 2.2rem)",
                       color: "var(--navy)",
                     }}
                   >
-                    Shibo Long
-                    <br />
-                    <em>Web Design & Engineering</em>
+                    Web Designer & Frontend Engineer
                   </h2>
-                  <div className="amber-rule mb-6" />
-                </div>
-
-                <div className="reveal" style={{ transitionDelay: "0.1s" }}>
                   <p
-                    className="leading-relaxed mb-5"
+                    className="text-lg leading-relaxed mb-6"
                     style={{
                       fontFamily: "'Source Sans 3', sans-serif",
-                      fontSize: "1.05rem",
                       color: "var(--slate)",
+                      lineHeight: "1.8",
                     }}
                   >
+<<<<<<< HEAD
                     Welcome to my ENGR 110 eFolio! I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and now based in Shanghai. I transitioned from Computer Science & Engineering into Web Design to combine technical problem-solving with visual thinking. This portfolio documents my journey through ENGR 110 , a course that challenges students to tackle authentic engineering challenges in collaboration with community partners.
+=======
+                    I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and currently based in Shanghai. My background started in Computer Science & Engineering, and I transitioned into Web Design and Engineering to combine technical problem-solving with visual thinking.
+>>>>>>> cf118cddfd24aba6a2158a1f0816b2afd5826984
                   </p>
                   <p
-                    className="leading-relaxed mb-5"
+                    className="text-lg leading-relaxed"
                     style={{
                       fontFamily: "'Source Sans 3', sans-serif",
-                      fontSize: "1.05rem",
                       color: "var(--slate)",
+                      lineHeight: "1.8",
                     }}
                   >
+<<<<<<< HEAD
                     I'm particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I work at the intersection of front-end engineering, user experience, and clean visual design. I believe that the best solutions emerge from deep empathy with the people they serve , a principle I hope to embody throughout this course.
                   </p>
                   <p
@@ -217,11 +258,85 @@ export default function AboutMe() {
                             >
                               {item.text}
                             </p>
+=======
+                    I am particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I enjoy working at the intersection of front-end engineering, user experience, and clean visual design. Outside of coursework, I explore side projects, read about product design, and quietly iterate on ideas until they feel cohesive. I value clarity, reliability, and small details that make digital products feel considerate.
+                  </p>
+                </div>
+
+                {/* Interests Grid */}
+                <div className="reveal">
+                  <div className="section-label mb-6">Interests & Goals</div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {interests.map((item, i) => {
+                      const Icon = item.icon;
+                      return (
+                        <div
+                          key={i}
+                          className="reveal rounded-lg p-6"
+                          style={{
+                            transitionDelay: `${i * 0.1}s`,
+                            background: "white",
+                            boxShadow: "0 4px 20px rgba(15,32,68,0.07)",
+                            borderTop: "3px solid var(--amber)",
+                          }}
+                        >
+                          <div className="flex items-start gap-4">
+                            <Icon
+                              size={24}
+                              style={{ color: "var(--amber)", flexShrink: 0, marginTop: "2px" }}
+                            />
+                            <div>
+                              <h3
+                                className="font-bold mb-2"
+                                style={{
+                                  fontFamily: "'Playfair Display', serif",
+                                  color: "var(--navy)",
+                                  fontSize: "1.1rem",
+                                }}
+                              >
+                                {item.title}
+                              </h3>
+                              <p
+                                style={{
+                                  fontFamily: "'Source Sans 3', sans-serif",
+                                  color: "var(--slate)",
+                                  fontSize: "0.95rem",
+                                  lineHeight: "1.6",
+                                }}
+                              >
+                                {item.text}
+                              </p>
+                            </div>
+>>>>>>> cf118cddfd24aba6a2158a1f0816b2afd5826984
                           </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* ENGR 110 Goals */}
+                <div className="reveal mt-12 rounded-lg p-8" style={{ background: "rgba(245,158,11,0.08)", borderLeft: "4px solid var(--amber)" }}>
+                  <div className="section-label mb-4">ENGR 110 Goals</div>
+                  <h3
+                    className="font-bold mb-4"
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      color: "var(--navy)",
+                      fontSize: "1.2rem",
+                    }}
+                  >
+                    Learning Objectives for This Course
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: "'Source Sans 3', sans-serif",
+                      color: "var(--slate)",
+                      lineHeight: "1.8",
+                    }}
+                  >
+                    When taking ENGR 110, I wish to learn more about how to distinguish problems and be active in solving these problems. Through this course, I hope to apply design thinking to real community challenges and develop solutions that create meaningful impact. I want to grow as both a designer and engineer — understanding not just how to build things, but how to build things that matter to the people they serve.
+                  </p>
                 </div>
               </div>
             </div>
