@@ -86,11 +86,12 @@ export default function Navigation() {
               </div>
               <div>
                 <div
-                  className="text-sm font-bold leading-tight"
+                  className="leading-tight"
                   style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    fontSize: "0.85rem",
-                    letterSpacing: "0.05em",
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "0.9rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.02em",
                     color: "var(--ivory)",
                   }}
                 >
