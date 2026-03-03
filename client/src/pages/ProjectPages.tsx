@@ -69,8 +69,8 @@ const activities = [
     date: "Jan 6–10",
     title: "Team Formation & Kickoff",
     status: "complete",
-    desc: "Introductions, role assignments, communication norms established. Reviewed course expectations and project scope.",
-    deliverable: "Team Charter",
+    desc: "Met as a team of five: Shibo (Web Design), Conner (CS), Irene (CS), Anushri (ECE), and Lily (Economics). Established communication norms, assigned roles, and reviewed ENGR 110 expectations. Began background research on Valley Verde and urban agriculture initiatives.",
+    deliverable: "Team Charter & Initial Research",
   },
   {
     week: "Week 2",
@@ -289,14 +289,14 @@ export function AboutPartner() {
                     Partner Organization
                   </h3>
                   <p className="text-sm" style={{ color: "rgba(250,250,247,0.6)", fontFamily: "'Source Sans 3', sans-serif" }}>
-                    Community Non-Profit
+                    Food Justice Non-Profit
                   </p>
                   <div className="mt-6 space-y-2 text-left">
                     {[
+                      { label: "Organization", value: "Valley Verde" },
                       { label: "Location", value: "San Jose, CA" },
-                      { label: "Founded", value: "2005" },
-                      { label: "Focus Area", value: "Community Services" },
-                      { label: "Contact", value: "Partner Liaison" },
+                      { label: "Mission", value: "Food Security" },
+                      { label: "Tagline", value: "Plant Eat Share" },
                     ].map((item) => (
                       <div key={item.label} className="flex justify-between text-xs">
                         <span style={{ color: "var(--amber)", fontFamily: "'Source Sans 3', sans-serif", fontWeight: 700 }}>
@@ -321,21 +321,15 @@ export function AboutPartner() {
                 </h2>
                 <div className="amber-rule mb-6" />
                 <p className="leading-relaxed mb-4" style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "1.05rem", color: "var(--slate)" }}>
-                  Our community partner is a local non-profit organization dedicated to improving
-                  quality of life for underserved populations in the San Jose area. They have
-                  partnered with Santa Clara University's ENGR 110 program to bring a real
-                  engineering challenge to our team.
+                  Valley Verde is a nonprofit in San Jose dedicated to promoting food security, sovereignty, and justice through urban garden education and resources. They work directly with underserved communities to provide free workshops, nutritional education, and gardening knowledge.
                 </p>
                 <p className="leading-relaxed mb-4" style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "1.05rem", color: "var(--slate)" }}>
-                  The organization serves hundreds of community members annually through a range
-                  of programs. Their challenge to us centers on improving operational efficiency
-                  and enhancing the experience of both staff and clients.
+                  Their flagship Shared Garden Program addresses food insecurity by providing free workshops to affected and underserved communities. The program offers nutritional education, addresses climate change, and strengthens community ties and resources.
                 </p>
                 <blockquote className="pull-quote mt-6">
-                  "We are excited to work with the SCU engineering team. Fresh perspectives and
-                  technical expertise are exactly what we need to move forward."
+                  "We're a small but mighty organization working to build food justice in San Jose."
                   <footer className="mt-2 text-sm not-italic" style={{ color: "var(--slate)" }}>
-                    — Partner Representative
+                    — Valley Verde
                   </footer>
                 </blockquote>
               </div>
@@ -362,9 +356,9 @@ export function AboutPartner() {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
-                    { label: "Primary Users", value: "Staff & Clients" },
-                    { label: "Key Constraint", value: "Low-cost Solution" },
-                    { label: "Success Metric", value: "Time Saved / Satisfaction" },
+                    { label: "Primary Users", value: "Community Members Staff & Clients Staff" },
+                    { label: "Key Constraint", value: "Sustainable Low-cost Solution Low-cost" },
+                    { label: "Success Metric", value: "Community Impact Time Saved / Satisfaction Reach" },
                   ].map((item) => (
                     <div
                       key={item.label}

@@ -16,6 +16,7 @@ import AboutMe from "./pages/AboutMe";
 import TheTeam from "./pages/TheTeam";
 import Contact from "./pages/Contact";
 import ProjectOverview from "./pages/ProjectOverview";
+import CommunityPartner from "./pages/CommunityPartner";
 import {
   TeamActivities,
   AboutPartner,
@@ -33,6 +34,7 @@ function Router() {
       <Route path="/project" component={ProjectOverview} />
       <Route path="/project/team-activities" component={TeamActivities} />
       <Route path="/project/partner" component={AboutPartner} />
+      <Route path="/community-partner" component={CommunityPartner} />
       <Route path="/project/gantt-chart" component={GanttChart} />
       <Route path="/project/progress-meetings" component={ProgressMeetings} />
       <Route path="/project/reflections" component={Reflections} />

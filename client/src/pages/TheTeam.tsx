@@ -1,45 +1,53 @@
 /*
  * The Team Page — Academic Editorial Design
- * Team member cards with roles, bios, and placeholder photos
+ * Team member cards with roles, majors, bios, and eFolio links
  */
 import PageHeader from "@/components/PageHeader";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Linkedin, Mail } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const TEAM_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663400044455/bp2s8LMMAEXrBB76Y8qTTz/team-bg-bxxdUsrumBiV9JgeuJ6VzR.webp";
 
 const teamMembers = [
   {
-    initials: "YN",
-    name: "Your Name",
-    role: "Team Lead & Design Engineer",
-    major: "Mechanical Engineering",
-    bio: "Responsible for overall project coordination, design documentation, and stakeholder communication. Passionate about sustainable engineering solutions.",
-    focus: "Design Process & Documentation",
+    initials: "S",
+    name: "Shibo",
+    role: "Web Design",
+    major: "SCU '26",
+    bio: "Leads the visual design and web development for the eFolio. Passionate about creating intuitive, beautiful digital experiences that communicate complex ideas clearly.",
+    efolioUrl: null,
   },
   {
-    initials: "TM",
-    name: "Team Member 2",
-    role: "Research & Analysis Lead",
-    major: "Civil Engineering",
-    bio: "Leads the research phase, data collection, and analysis. Brings a systematic approach to problem-solving and a keen eye for detail.",
-    focus: "Research & Data Analysis",
+    initials: "C",
+    name: "Conner",
+    role: "Computer Science",
+    major: "SCU '27",
+    bio: "Contributes technical expertise and backend considerations. Focused on building scalable solutions that address real community needs.",
+    efolioUrl: "https://cchen192.wixsite.com/engr110conner",
   },
   {
-    initials: "TM",
-    name: "Team Member 3",
-    role: "Prototyping Engineer",
-    major: "Electrical Engineering",
-    bio: "Specializes in rapid prototyping and technical implementation. Bridges the gap between conceptual design and physical realization.",
-    focus: "Prototyping & Testing",
+    initials: "I",
+    name: "Irene",
+    role: "Computer Science",
+    major: "SCU '26",
+    bio: "Brings software engineering skills to the team. Committed to translating user needs into functional, reliable systems.",
+    efolioUrl: "https://ichang3.wixsite.com/engr110-efolio",
   },
   {
-    initials: "TM",
-    name: "Team Member 4",
-    role: "Community Liaison",
-    major: "Environmental Engineering",
-    bio: "Manages the relationship with our community partner, ensuring the project remains grounded in real user needs and community values.",
-    focus: "Partner Relations & Outreach",
+    initials: "A",
+    name: "Anushri",
+    role: "Electrical & Computer Engineering",
+    major: "SCU '26",
+    bio: "Combines hardware and software thinking to solve complex problems. Passionate about sustainable technology solutions.",
+    efolioUrl: "https://www.canva.com/design/DAG-VWkmtaw/ecE5F-dWJUTC70X6ZwIFcg",
+  },
+  {
+    initials: "L",
+    name: "Lily",
+    role: "Economics",
+    major: "SCU '26",
+    bio: "Brings economic and business perspective to the project. Focused on understanding stakeholder needs and market viability.",
+    efolioUrl: "https://sites.google.com/view/engr110-lilyjiang?usp=sharing",
   },
 ];
 
@@ -103,12 +111,12 @@ export default function TheTeam() {
                     >
                       <span
                         className="text-xl font-bold"
-                        style={{ fontFamily: "'Playfair Display', serif", color: "var(--amber)" }}
+                        style={{ fontFamily: "'Space Grotesk', sans-serif", color: "var(--amber)" }}
                       >
                         {member.initials}
                       </span>
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3
                         className="font-bold"
                         style={{
@@ -142,17 +150,31 @@ export default function TheTeam() {
                     >
                       {member.bio}
                     </p>
-                    <div
-                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded text-xs font-semibold"
-                      style={{
-                        background: "rgba(245,158,11,0.1)",
-                        color: "var(--navy)",
-                        fontFamily: "'Source Sans 3', sans-serif",
-                      }}
-                    >
-                      <span style={{ color: "var(--amber)" }}>●</span>
-                      Focus: {member.focus}
-                    </div>
+                    {member.efolioUrl && (
+                      <a
+                        href={member.efolioUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3 py-2 rounded text-xs font-semibold"
+                        style={{
+                          background: "rgba(245,158,11,0.1)",
+                          color: "var(--amber)",
+                          fontFamily: "'Source Sans 3', sans-serif",
+                          textDecoration: "none",
+                          transition: "all 0.2s",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "rgba(245,158,11,0.2)";
+                          e.currentTarget.style.transform = "translateX(2px)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "rgba(245,158,11,0.1)";
+                          e.currentTarget.style.transform = "translateX(0)";
+                        }}
+                      >
+                        View eFolio <ExternalLink size={13} />
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
