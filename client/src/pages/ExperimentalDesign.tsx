@@ -1,5 +1,5 @@
 /**
- * Experimental Design Page — Academic Editorial Design
+ * Experimental Design Page , Academic Editorial Design
  * Documents the survey methodology, testing protocol, and data collection strategy
  */
 import PageHeader from "@/components/PageHeader";

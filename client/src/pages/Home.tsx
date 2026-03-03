@@ -1,5 +1,5 @@
 /*
- * Home Page — Academic Editorial Design
+ * Home Page , Academic Editorial Design
  * Full-bleed hero with navy bg + engineering blueprint image
  * Sections: Welcome, Site Purpose, Navigation Overview, Quote
  */
@@ -15,7 +15,7 @@ const sections = [
     icon: BookOpen,
     label: "About Me",
     path: "/about",
-    description: "Learn about the student behind this portfolio — academic interests, goals, and aspirations for ENGR 110.",
+    description: "Learn about the student behind this portfolio , academic interests, goals, and aspirations for ENGR 110.",
   },
   {
     icon: Users,
@@ -33,7 +33,7 @@ const sections = [
     icon: Mail,
     label: "Contact",
     path: "/contact",
-    description: "Reach out via the contact form — connected directly to the student's SCU email.",
+    description: "Reach out via the contact form , connected directly to the student's SCU email.",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function Home() {
               color: "rgba(250,250,247,0.8)",
             }}
           >
-            Welcome to my ENGR 110 electronic portfolio — the digital home for my design project.
+            Welcome to my ENGR 110 electronic portfolio , the digital home for my design project.
             Here I organize, document, and present my work, telling a cohesive story of progress
             from initial concepts to final deliverables.
           </p>
@@ -168,7 +168,7 @@ export default function Home() {
                 >
                   Throughout ENGR 110, I am working on a major design project that challenges me to
                   apply engineering principles to real-world problems. This eFolio is the digital
-                  home for that project — a living document that grows alongside my work.
+                  home for that project , a living document that grows alongside my work.
                 </p>
                 <p
                   className="leading-relaxed mb-8"
@@ -243,7 +243,7 @@ export default function Home() {
                 fontSize: "clamp(1.2rem, 3vw, 1.6rem)",
               }}
             >
-              "Engineering is not only about solving problems — it is about understanding people,
+              "Engineering is not only about solving problems , it is about understanding people,
               context, and consequence. This portfolio documents that journey."
             </div>
             <div className="amber-rule mx-auto mt-8" />

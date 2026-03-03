@@ -1,5 +1,5 @@
 /*
- * App.tsx — ENGR 110 eFolio
+ * App.tsx , ENGR 110 eFolio
  * Academic Editorial Design System
  * Routes: Home, About Me, The Team, Project (5 sub-pages), Contact
  */

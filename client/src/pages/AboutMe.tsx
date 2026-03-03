@@ -1,5 +1,5 @@
 /*
- * About Me Page — Academic Editorial Design
+ * About Me Page , Academic Editorial Design
  * Professional photo placeholder, biography, academic interests, course goals
  */
 import PageHeader from "@/components/PageHeader";
@@ -39,7 +39,7 @@ export default function AboutMe() {
       <PageHeader
         label="Personal Introduction"
         title="About Me"
-        subtitle="Get to know the student behind this eFolio — my background, interests, and aspirations for ENGR 110."
+        subtitle="Get to know the student behind this eFolio , my background, interests, and aspirations for ENGR 110."
         bgImage={ABOUT_BG}
       />
 
@@ -99,7 +99,7 @@ export default function AboutMe() {
                 >
                   <dl className="space-y-3">
                     {[
-                      { label: "Name", value: "Shibo Long" },
+                      { label: "Name", value: "Shibo Cong" },
                       { label: "Major", value: "Web Design & Engineering" },
                       { label: "Year", value: "Senior, SCU'26" },
                       { label: "University", value: "Santa Clara University" },
@@ -152,7 +152,7 @@ export default function AboutMe() {
                       color: "var(--slate)",
                     }}
                   >
-                    Welcome to my ENGR 110 eFolio! I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and now based in Shanghai. I transitioned from Computer Science & Engineering into Web Design to combine technical problem-solving with visual thinking. This portfolio documents my journey through ENGR 110 — a course that challenges students to tackle authentic engineering challenges in collaboration with community partners.
+                    Welcome to my ENGR 110 eFolio! I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and now based in Shanghai. I transitioned from Computer Science & Engineering into Web Design to combine technical problem-solving with visual thinking. This portfolio documents my journey through ENGR 110 , a course that challenges students to tackle authentic engineering challenges in collaboration with community partners.
                   </p>
                   <p
                     className="leading-relaxed mb-5"
@@ -162,7 +162,7 @@ export default function AboutMe() {
                       color: "var(--slate)",
                     }}
                   >
-                    I'm particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I work at the intersection of front-end engineering, user experience, and clean visual design. I believe that the best solutions emerge from deep empathy with the people they serve — a principle I hope to embody throughout this course.
+                    I'm particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I work at the intersection of front-end engineering, user experience, and clean visual design. I believe that the best solutions emerge from deep empathy with the people they serve , a principle I hope to embody throughout this course.
                   </p>
                   <p
                     className="leading-relaxed mb-10"
@@ -179,7 +179,7 @@ export default function AboutMe() {
                 {/* Pull Quote */}
                 <div className="reveal mb-10" style={{ transitionDelay: "0.2s" }}>
                   <blockquote className="pull-quote">
-                    "I value clarity, reliability, and small details that make digital products feel considerate. Good design is invisible — it just works."
+                    "I value clarity, reliability, and small details that make digital products feel considerate. Good design is invisible , it just works."
                   </blockquote>
                 </div>
 

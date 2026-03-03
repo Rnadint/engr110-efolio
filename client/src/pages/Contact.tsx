@@ -1,5 +1,5 @@
 /*
- * Contact Page — Academic Editorial Design
+ * Contact Page , Academic Editorial Design
  * Contact form linked to SCU email (no direct email display)
  * Uses mailto: action to protect email from scrapers
  */
@@ -34,7 +34,7 @@ export default function Contact() {
     }
     setLoading(true);
 
-    // Build mailto link — protects email from scrapers
+    // Build mailto link , protects email from scrapers
     const subject = encodeURIComponent(form.subject || `ENGR 110 eFolio: Message from ${form.name}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`

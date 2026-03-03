@@ -1,5 +1,5 @@
 /*
- * Team Contract Page — Academic Editorial Design
+ * Team Contract Page , Academic Editorial Design
  * Showcases team agreements, collaboration norms, and communication practices
  */
 import PageHeader from "@/components/PageHeader";
@@ -80,7 +80,7 @@ export default function TeamContract() {
         "If something changes, communicate that as early as possible in the group chat",
         "Be clear about what each person is doing and have proper documentation",
         "Accountability: each member finishes the task that were assigned",
-        "Quality over speed — ensure work meets standards before submission",
+        "Quality over speed , ensure work meets standards before submission",
       ],
     },
     {

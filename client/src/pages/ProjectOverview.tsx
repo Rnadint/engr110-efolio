@@ -1,5 +1,5 @@
 /*
- * Project Overview Page — Academic Editorial Design
+ * Project Overview Page , Academic Editorial Design
  * Landing page for the Project section with cards linking to all 5 sub-pages
  */
 import PageHeader from "@/components/PageHeader";
@@ -49,7 +49,7 @@ const subPages = [
     label: "04",
     title: "Progress Meetings",
     path: "/project/progress-meetings",
-    desc: "Documented records of all team and partner meetings — agendas, key decisions, and next steps.",
+    desc: "Documented records of all team and partner meetings , agendas, key decisions, and next steps.",
     tag: "Meeting Records",
   },
   {
@@ -57,7 +57,7 @@ const subPages = [
     label: "05",
     title: "Reflections",
     path: "/project/reflections",
-    desc: "Personal reflections on the learning process — insights on engineering, teamwork, and growth.",
+    desc: "Personal reflections on the learning process , insights on engineering, teamwork, and growth.",
     tag: "Learning Journal",
   },
   {
@@ -65,7 +65,7 @@ const subPages = [
     label: "06",
     title: "Brainstorming Process",
     path: "/project/brainstorming",
-    desc: "Showcasing our team's creative ideation process — 30+ concepts generated, evaluated, and refined.",
+    desc: "Showcasing our team's creative ideation process , 30+ concepts generated, evaluated, and refined.",
     tag: "Ideation",
   },
   {
@@ -110,7 +110,7 @@ export default function ProjectOverview() {
       <PageHeader
         label="Project Documentation"
         title="Project Overview"
-        subtitle="A comprehensive record of my ENGR 110 design project — from team formation through final deliverables."
+        subtitle="A comprehensive record of my ENGR 110 design project , from team formation through final deliverables."
         bgImage={PROJECT_BG}
       />
 
@@ -140,7 +140,7 @@ export default function ProjectOverview() {
                 }}
               >
                 This section contains the full documentation of my ENGR 110 design project.
-                Each sub-page captures a different dimension of the work — from weekly activities
+                Each sub-page captures a different dimension of the work , from weekly activities
                 and partner context, to the project timeline, meeting records, and personal
                 reflections. Together, they tell the complete story of my engineering design experience.
               </p>

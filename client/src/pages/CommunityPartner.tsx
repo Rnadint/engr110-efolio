@@ -1,5 +1,5 @@
 /*
- * Community Partner Page — Academic Editorial Design
+ * Community Partner Page , Academic Editorial Design
  * Dedicated page showcasing Valley Verde and their mission
  */
 import PageHeader from "@/components/PageHeader";
@@ -39,7 +39,7 @@ export default function CommunityPartner() {
       <PageHeader
         label="Our Community Partner"
         title="Valley Verde"
-        subtitle="Plant • Eat • Share — A nonprofit dedicated to food security, sovereignty, and justice through urban garden education."
+        subtitle="Plant • Eat • Share , A nonprofit dedicated to food security, sovereignty, and justice through urban garden education."
         bgImage={PARTNER_BG}
       />
 

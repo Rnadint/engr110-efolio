@@ -1,5 +1,5 @@
 /*
- * Project Sub-Pages — Academic Editorial Design
+ * Project Sub-Pages , Academic Editorial Design
  * Five sub-pages: Team Activities, About our Partner, Gantt Chart, Progress Meetings, Reflections
  */
 import PageHeader from "@/components/PageHeader";
@@ -77,7 +77,7 @@ const activities = [
     date: "Jan 13–17",
     title: "Team Formation & Partner Introduction",
     status: "complete",
-    desc: "Met as a team of five: Shibo (Web Design), Conner (CS), Irene (CS), Anushri (ECE), and Lily (Economics). Established communication norms, assigned roles, and reviewed team expectations. First meeting with Valley Verde — toured facilities, observed workflows, and gathered initial requirements. Began background research on food security and urban agriculture.",
+    desc: "Met as a team of five: Shibo (Web Design), Conner (CS), Irene (CS), Anushri (ECE), and Lily (Economics). Established communication norms, assigned roles, and reviewed team expectations. First meeting with Valley Verde , toured facilities, observed workflows, and gathered initial requirements. Began background research on food security and urban agriculture.",
     deliverable: "Team Charter & Partner Meeting Notes",
   },
   {
@@ -337,7 +337,7 @@ export function AboutPartner() {
                 <blockquote className="pull-quote mt-6">
                   "We're a small but mighty organization working to build food justice in San Jose."
                   <footer className="mt-2 text-sm not-italic" style={{ color: "var(--slate)" }}>
-                    — Valley Verde
+                    , Valley Verde
                   </footer>
                 </blockquote>
               </div>
@@ -637,7 +637,7 @@ export function Reflections() {
     {
       week: "Week 3",
       title: "The Power of Brainstorming",
-      reflection: "Our brainstorming session generated so many diverse ideas. It was valuable to see how each team member brought their unique perspective — from web design to economics to electrical engineering. The variety of ideas reflects our team's multidisciplinary strength.",
+      reflection: "Our brainstorming session generated so many diverse ideas. It was valuable to see how each team member brought their unique perspective , from web design to economics to electrical engineering. The variety of ideas reflects our team's multidisciplinary strength.",
       learning: "Diversity of thought leads to better solutions",
     },
     {
@@ -655,19 +655,19 @@ export function Reflections() {
     {
       week: "Week 6",
       title: "Receiving Critical Feedback",
-      reflection: "The partner presentation was both exciting and humbling. Valley Verde's feedback challenged some of our assumptions about what 'simple' means to non-technical users. Their request for a data pipeline diagram made me realize that technical clarity and user accessibility are not the same thing. The most valuable feedback was about simplifying our technical explanations — it pushed me to think about how to make complex systems feel approachable. This experience reinforced that good design is about meeting users where they are, not where we assume they should be.",
+      reflection: "The partner presentation was both exciting and humbling. Valley Verde's feedback challenged some of our assumptions about what 'simple' means to non-technical users. Their request for a data pipeline diagram made me realize that technical clarity and user accessibility are not the same thing. The most valuable feedback was about simplifying our technical explanations , it pushed me to think about how to make complex systems feel approachable. This experience reinforced that good design is about meeting users where they are, not where we assume they should be.",
       learning: "User feedback is a gift; it reveals blind spots we can't see alone",
     },
     {
       week: "Week 7",
       title: "Building Systems, Not Just Features",
-      reflection: "This week was about connecting the dots — linking the survey form to data collection, building the data pipeline, and ensuring everything flows seamlessly. I contributed to the frontend dashboard development and realized how much of good design is invisible infrastructure. The survey design process taught me that every question, every data field, and every visualization choice has downstream consequences. When Irene and I were integrating the backend API with the frontend, I saw how critical clear communication between backend and frontend teams is. One misaligned data format can cascade into hours of debugging.",
+      reflection: "This week was about connecting the dots , linking the survey form to data collection, building the data pipeline, and ensuring everything flows seamlessly. I contributed to the frontend dashboard development and realized how much of good design is invisible infrastructure. The survey design process taught me that every question, every data field, and every visualization choice has downstream consequences. When Irene and I were integrating the backend API with the frontend, I saw how critical clear communication between backend and frontend teams is. One misaligned data format can cascade into hours of debugging.",
       learning: "Systems thinking is as important as individual component design",
     },
     {
       week: "Week 8",
       title: "Bringing It All Together",
-      reflection: "Working on the final report draft and heatmap visualization this week felt like watching all our pieces come together. I led the frontend development sections and documented the UI/UX decisions we made throughout the quarter. Creating the heatmap was particularly rewarding — seeing food insecurity data mapped geographically made the abstract numbers feel real and urgent. The most challenging part was synthesizing 8 weeks of work into a coherent narrative that honors both the technical complexity and the human impact. Writing about our design choices forced me to articulate not just what we built, but why each decision mattered. I also realized how much I've grown as a designer this quarter — from thinking about pixels and layouts to thinking about systems, impact, and accessibility.",
+      reflection: "Working on the final report draft and heatmap visualization this week felt like watching all our pieces come together. I led the frontend development sections and documented the UI/UX decisions we made throughout the quarter. Creating the heatmap was particularly rewarding , seeing food insecurity data mapped geographically made the abstract numbers feel real and urgent. The most challenging part was synthesizing 8 weeks of work into a coherent narrative that honors both the technical complexity and the human impact. Writing about our design choices forced me to articulate not just what we built, but why each decision mattered. I also realized how much I've grown as a designer this quarter , from thinking about pixels and layouts to thinking about systems, impact, and accessibility.",
       learning: "Great design solves real problems for real people; documentation of that journey is part of the solution",
     },
   ];

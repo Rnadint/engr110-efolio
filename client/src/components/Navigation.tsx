@@ -1,5 +1,5 @@
 /*
- * Navigation — Academic Editorial Design
+ * Navigation , Academic Editorial Design
  * Sticky top nav, deep navy background, amber accent underlines
  * Dropdown for Project sub-pages
  */

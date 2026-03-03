@@ -1,5 +1,5 @@
 /*
- * Project Requirements Page — Academic Editorial Design
+ * Project Requirements Page , Academic Editorial Design
  * Defines SMART project requirements and success metrics
  */
 import PageHeader from "@/components/PageHeader";

@@ -1,5 +1,5 @@
 /*
- * Brainstorming Process Page — Academic Editorial Design
+ * Brainstorming Process Page , Academic Editorial Design
  * Showcases the team's ideation process, concept generation, and idea evaluation
  */
 import PageHeader from "@/components/PageHeader";

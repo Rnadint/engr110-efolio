@@ -1,5 +1,5 @@
 /**
- * Data Visualization Page — Academic Editorial Design
+ * Data Visualization Page , Academic Editorial Design
  * Showcases heatmap, dashboard mockups, and data analysis visualizations
  */
 import PageHeader from "@/components/PageHeader";
@@ -56,7 +56,7 @@ export default function DataVisualization() {
                 </div>
                 <div style={{ background: "white", borderRadius: "8px", padding: "20px", textAlign: "center", minHeight: "300px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)", fontSize: "0.95rem" }}>
-                    [Heatmap Visualization: Santa Clara County zip codes colored by food insecurity intensity — red (high), orange (medium), yellow (low)]
+                    [Heatmap Visualization: Santa Clara County zip codes colored by food insecurity intensity , red (high), orange (medium), yellow (low)]
                   </p>
                 </div>
               </div>
@@ -67,7 +67,7 @@ export default function DataVisualization() {
                     High Priority Areas
                   </h4>
                   <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)", fontSize: "0.85rem" }}>
-                    East Palo Alto, Gilroy, San Jose South Side — 60%+ food insecurity
+                    East Palo Alto, Gilroy, San Jose South Side , 60%+ food insecurity
                   </p>
                 </div>
                 <div className="rounded-lg p-4" style={{ background: "var(--ivory)" }}>
@@ -75,7 +75,7 @@ export default function DataVisualization() {
                     Medium Priority Areas
                   </h4>
                   <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)", fontSize: "0.85rem" }}>
-                    San Jose North, Sunnyvale, Santa Clara — 40-60% food insecurity
+                    San Jose North, Sunnyvale, Santa Clara , 40-60% food insecurity
                   </p>
                 </div>
                 <div className="rounded-lg p-4" style={{ background: "var(--ivory)" }}>
@@ -83,7 +83,7 @@ export default function DataVisualization() {
                     Lower Priority Areas
                   </h4>
                   <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--slate)", fontSize: "0.85rem" }}>
-                    Cupertino, Los Altos, Saratoga — Below 40% food insecurity
+                    Cupertino, Los Altos, Saratoga , Below 40% food insecurity
                   </p>
                 </div>
               </div>

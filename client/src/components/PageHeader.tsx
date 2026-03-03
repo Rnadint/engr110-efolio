@@ -1,5 +1,5 @@
 /*
- * PageHeader — Academic Editorial Design
+ * PageHeader , Academic Editorial Design
  * Full-bleed navy header with amber accent and dot-grid texture
  */
 interface PageHeaderProps {

@@ -1,5 +1,5 @@
 /*
- * The Team Page — Academic Editorial Design
+ * The Team Page , Academic Editorial Design
  * Team member cards with roles, majors, bios, and eFolio links
  */
 import PageHeader from "@/components/PageHeader";

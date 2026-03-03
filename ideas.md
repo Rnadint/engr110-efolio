@@ -1,4 +1,4 @@
-# ENGR 110 eFolio — Design Brainstorm
+# ENGR 110 eFolio , Design Brainstorm
 
 <response>
 <idea>
@@ -11,7 +11,7 @@
 
 **Color Philosophy:** Monochrome base (off-white #F5F4F0 and near-black #1A1A2E) with electric blue (#2563EB) as the sole accent. Communicates technical rigor and academic seriousness.
 
-**Layout Paradigm:** Asymmetric split layouts — left-heavy text columns with right-side visual panels. Navigation as a persistent left sidebar on desktop, collapsing to top bar on mobile.
+**Layout Paradigm:** Asymmetric split layouts , left-heavy text columns with right-side visual panels. Navigation as a persistent left sidebar on desktop, collapsing to top bar on mobile.
 
 **Signature Elements:**
 - Bold geometric rule lines as section dividers
@@ -22,15 +22,15 @@
 
 **Animation:** Fade-in on scroll with 200ms delay stagger. No bouncing or elastic effects.
 
-**Typography System:** DM Sans (body, 400/500) + Space Grotesk (headings, 700) — modern geometric sans-serif pairing that feels engineered.
+**Typography System:** DM Sans (body, 400/500) + Space Grotesk (headings, 700) , modern geometric sans-serif pairing that feels engineered.
 </idea>
-<text>Bauhaus Engineering Precision — strict grid, monochrome + electric blue accent, asymmetric layouts, geometric motifs.</text>
+<text>Bauhaus Engineering Precision , strict grid, monochrome + electric blue accent, asymmetric layouts, geometric motifs.</text>
 <probability>0.08</probability>
 </response>
 
 <response>
 <idea>
-**Design Movement:** Academic Editorial — inspired by MIT Technology Review and scientific journals
+**Design Movement:** Academic Editorial , inspired by MIT Technology Review and scientific journals
 **Core Principles:**
 - Clean serif-driven typography for credibility and readability
 - Generous whitespace as the primary design tool
@@ -50,15 +50,15 @@
 
 **Animation:** Slide-up entrance animations (translateY 20px → 0) with opacity fade. 300ms ease-out timing.
 
-**Typography System:** Playfair Display (headings, 700/900) + Source Sans 3 (body, 400/600) — classic editorial pairing with warmth and authority.
+**Typography System:** Playfair Display (headings, 700/900) + Source Sans 3 (body, 400/600) , classic editorial pairing with warmth and authority.
 </idea>
-<text>Academic Editorial — warm ivory + deep navy, Playfair Display headings, centered editorial columns, scholarly pull-quotes.</text>
+<text>Academic Editorial , warm ivory + deep navy, Playfair Display headings, centered editorial columns, scholarly pull-quotes.</text>
 <probability>0.07</probability>
 </response>
 
 <response>
 <idea>
-**Design Movement:** Modern Tech Portfolio — inspired by Linear, Vercel, and Notion's design language
+**Design Movement:** Modern Tech Portfolio , inspired by Linear, Vercel, and Notion's design language
 **Core Principles:**
 - Dark-mode first with subtle glass morphism elements
 - Sharp, confident typography with tight letter-spacing
@@ -78,9 +78,9 @@
 
 **Animation:** Staggered entrance animations, gradient shimmer on hover, smooth page transitions.
 
-**Typography System:** Sora (headings, 700/800) + Nunito Sans (body, 400/600) — modern, friendly, and technical.
+**Typography System:** Sora (headings, 700/800) + Nunito Sans (body, 400/600) , modern, friendly, and technical.
 </idea>
-<text>Modern Tech Portfolio — dark mode, glass morphism, teal-to-blue gradient accents, Sora headings, full-width alternating sections.</text>
+<text>Modern Tech Portfolio , dark mode, glass morphism, teal-to-blue gradient accents, Sora headings, full-width alternating sections.</text>
 <probability>0.06</probability>
 </response>
 

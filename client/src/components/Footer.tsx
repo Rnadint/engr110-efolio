@@ -1,5 +1,5 @@
 /*
- * Footer — Academic Editorial Design
+ * Footer , Academic Editorial Design
  * Deep navy background, amber accents, clean editorial layout
  */
 import { Link } from "wouter";
@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(250,250,247,0.65)", fontFamily: "'Source Sans 3', sans-serif" }}>
-              An individual electronic portfolio documenting the ENGR 110 design project journey — from initial concepts through final deliverables.
+              An individual electronic portfolio documenting the ENGR 110 design project journey , from initial concepts through final deliverables.
             </p>
           </div>
 
