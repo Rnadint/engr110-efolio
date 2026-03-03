@@ -107,11 +107,19 @@ const activities = [
   {
     week: "Week 6",
     date: "Feb 10–14",
-    title: "Testing & Iteration",
-    status: "upcoming",
-    desc: "User testing sessions with partner and stakeholders. Collect feedback and iterate on designs based on community input.",
-    deliverable: "Testing Report & Feedback Analysis",
+    title: "Project Status Presentation & Feedback Synthesis",
+    status: "complete",
+    desc: "Delivered comprehensive project status presentation to class and Valley Verde staff on February 10, 2026. Presented project overview, progress to date, and prototypes. Received critical feedback on final deliverable scope, data pipeline clarity, and long-term sustainability. Team synthesized feedback and identified key insights: need to clarify MVP vs. stretch goals, simplify technical explanations for non-technical audience, develop handoff plan for Valley Verde staff independence, and add data flow diagrams. Prioritized feedback by frequency and project importance. Decided to add final deliverable slide, data pipeline visualization, and comprehensive handoff documentation. Revised project scope to emphasize accessibility and community-centered design approach.",
+    deliverable: "Presentation Slides, Feedback Analysis, Revised Project Plan",
   },
+  {
+    week: "Week 7",
+    date: "Feb 17–21",
+    title: "Backend-Frontend Integration & Refinement",
+    status: "in-progress",
+    desc: "Integrating backend API with React frontend dashboard. Implementing data flow from Google Forms to Google Sheets to FastAPI to dashboard visualization. Creating data pipeline diagram for non-technical audience understanding. Refining UI based on feedback to ensure clarity and accessibility. Preparing for website integration into Valley Verde's WIX platform.",
+    deliverable: "Integrated Dashboard, Data Pipeline Diagram, UI Refinements",
+  }
 ];
 
 export function TeamActivities() {
