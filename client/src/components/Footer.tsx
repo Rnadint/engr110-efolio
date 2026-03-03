@@ -27,7 +27,7 @@ export default function Footer() {
               <div>
                 <div
                   className="font-bold"
-                  style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem" }}
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.95rem", letterSpacing: "0.03em" }}
                 >
                   ENGR 110 eFolio
                 </div>
