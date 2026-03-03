@@ -12,22 +12,22 @@ const interests = [
   {
     icon: GraduationCap,
     title: "Academic Background",
-    text: "Currently pursuing a degree in Engineering at Santa Clara University, with a focus on design thinking, systems engineering, and sustainable solutions.",
+    text: "I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and currently based in Shanghai. I transitioned from Computer Science & Engineering into Web Design to combine technical problem-solving with visual thinking.",
   },
   {
     icon: Lightbulb,
-    title: "Areas of Interest",
-    text: "Passionate about human-centered design, renewable energy systems, and the intersection of technology and social impact.",
+    title: "Design Philosophy",
+    text: "I'm particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I work at the intersection of front-end engineering, user experience, and clean visual design to create digital products that feel considerate.",
   },
   {
     icon: Target,
     title: "Goals for ENGR 110",
-    text: "To develop practical engineering design skills, learn to collaborate effectively in a team setting, and produce work that addresses real community needs.",
+    text: "I want to learn how to distinguish problems and become active in solving them. Through this course, I hope to apply design thinking to real community challenges and develop solutions that create meaningful impact.",
   },
   {
     icon: Heart,
-    title: "Beyond Engineering",
-    text: "Outside of academics, I enjoy hiking, photography, and volunteering with local STEM outreach programs for middle school students.",
+    title: "Beyond Coursework",
+    text: "I explore side projects, read about product design, and iterate on ideas until they feel cohesive. I value clarity, reliability, and small details that make digital products feel thoughtful and well-crafted.",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function AboutMe() {
                     >
                       Professional Photo
                       <br />
-                      <span className="text-xs opacity-60">(Replace with your photo)</span>
+                      <span className="text-xs opacity-60">(Replace with professional photo)</span>
                     </p>
                   </div>
                   {/* Amber accent */}
@@ -99,9 +99,9 @@ export default function AboutMe() {
                 >
                   <dl className="space-y-3">
                     {[
-                      { label: "Name", value: "Your Name" },
-                      { label: "Major", value: "Engineering" },
-                      { label: "Year", value: "Sophomore" },
+                      { label: "Name", value: "Shibo Long" },
+                      { label: "Major", value: "Web Design & Engineering" },
+                      { label: "Year", value: "Senior, SCU'26" },
                       { label: "University", value: "Santa Clara University" },
                       { label: "Course", value: "ENGR 110" },
                     ].map((item) => (
@@ -136,9 +136,9 @@ export default function AboutMe() {
                       color: "var(--navy)",
                     }}
                   >
-                    Hello, I'm a Student Engineer
+                    Shibo Long
                     <br />
-                    <em>with a Passion for Design</em>
+                    <em>Web Design & Engineering</em>
                   </h2>
                   <div className="amber-rule mb-6" />
                 </div>
@@ -152,11 +152,7 @@ export default function AboutMe() {
                       color: "var(--slate)",
                     }}
                   >
-                    Welcome to my ENGR 110 eFolio! I am a student at Santa Clara University,
-                    pursuing a degree in Engineering with a deep interest in how design can
-                    solve real-world problems. This portfolio documents my journey through
-                    ENGR 110 — a course that challenges students to tackle authentic engineering
-                    challenges in collaboration with community partners.
+                    Welcome to my ENGR 110 eFolio! I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and now based in Shanghai. I transitioned from Computer Science & Engineering into Web Design to combine technical problem-solving with visual thinking. This portfolio documents my journey through ENGR 110 — a course that challenges students to tackle authentic engineering challenges in collaboration with community partners.
                   </p>
                   <p
                     className="leading-relaxed mb-5"
@@ -166,10 +162,7 @@ export default function AboutMe() {
                       color: "var(--slate)",
                     }}
                   >
-                    My academic interests span mechanical systems, sustainable design, and the
-                    human factors that shape how technology is adopted and used. I believe that
-                    the best engineering solutions emerge from deep empathy with the people they
-                    serve — a principle I hope to embody throughout this course.
+                    I'm particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I work at the intersection of front-end engineering, user experience, and clean visual design. I believe that the best solutions emerge from deep empathy with the people they serve — a principle I hope to embody throughout this course.
                   </p>
                   <p
                     className="leading-relaxed mb-10"
@@ -179,18 +172,14 @@ export default function AboutMe() {
                       color: "var(--slate)",
                     }}
                   >
-                    Through ENGR 110, I hope to strengthen my ability to work in
-                    multidisciplinary teams, communicate technical ideas clearly to diverse
-                    audiences, and develop solutions that are not only functional but also
-                    equitable and sustainable.
+                    Through ENGR 110, I hope to learn how to distinguish problems and become active in solving them. I want to strengthen my ability to work in multidisciplinary teams, communicate technical ideas clearly to diverse audiences, and develop solutions that are not only functional but also equitable and impactful.
                   </p>
                 </div>
 
                 {/* Pull Quote */}
                 <div className="reveal mb-10" style={{ transitionDelay: "0.2s" }}>
                   <blockquote className="pull-quote">
-                    "I chose engineering because I want to build things that matter — solutions
-                    that improve lives and stand the test of time."
+                    "I value clarity, reliability, and small details that make digital products feel considerate. Good design is invisible — it just works."
                   </blockquote>
                 </div>
 
