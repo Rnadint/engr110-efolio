@@ -80,7 +80,6 @@ export default function AboutMe() {
                   }}
                 >
                   <dl className="space-y-3">
-<<<<<<< HEAD
                     {[
                       { label: "Name", value: "Shibo Cong" },
                       { label: "Major", value: "Web Design & Engineering" },
@@ -103,7 +102,6 @@ export default function AboutMe() {
                         </dd>
                       </div>
                     ))}
-=======
                     <div>
                       <dt
                         className="text-xs font-bold uppercase tracking-wider"
@@ -115,7 +113,7 @@ export default function AboutMe() {
                         className="text-sm font-semibold mt-1"
                         style={{ color: "var(--navy)", fontFamily: "'Source Sans 3', sans-serif" }}
                       >
-                        Shibo Li
+                        Shibo Cong
                       </dd>
                     </div>
                     <div>
@@ -160,7 +158,6 @@ export default function AboutMe() {
                         Shanghai, China
                       </dd>
                     </div>
->>>>>>> cf118cddfd24aba6a2158a1f0816b2afd5826984
                   </dl>
                 </div>
               </div>
@@ -188,11 +185,7 @@ export default function AboutMe() {
                       lineHeight: "1.8",
                     }}
                   >
-<<<<<<< HEAD
-                    Welcome to my ENGR 110 eFolio! I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and now based in Shanghai. I transitioned from Computer Science & Engineering into Web Design to combine technical problem-solving with visual thinking. This portfolio documents my journey through ENGR 110 , a course that challenges students to tackle authentic engineering challenges in collaboration with community partners.
-=======
                     I'm a 24-year-old Web Design and Engineering student at Santa Clara University, originally from Shandong, China and currently based in Shanghai. My background started in Computer Science & Engineering, and I transitioned into Web Design and Engineering to combine technical problem-solving with visual thinking.
->>>>>>> cf118cddfd24aba6a2158a1f0816b2afd5826984
                   </p>
                   <p
                     className="text-lg leading-relaxed"
@@ -202,63 +195,6 @@ export default function AboutMe() {
                       lineHeight: "1.8",
                     }}
                   >
-<<<<<<< HEAD
-                    I'm particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I work at the intersection of front-end engineering, user experience, and clean visual design. I believe that the best solutions emerge from deep empathy with the people they serve , a principle I hope to embody throughout this course.
-                  </p>
-                  <p
-                    className="leading-relaxed mb-10"
-                    style={{
-                      fontFamily: "'Source Sans 3', sans-serif",
-                      fontSize: "1.05rem",
-                      color: "var(--slate)",
-                    }}
-                  >
-                    Through ENGR 110, I hope to learn how to distinguish problems and become active in solving them. I want to strengthen my ability to work in multidisciplinary teams, communicate technical ideas clearly to diverse audiences, and develop solutions that are not only functional but also equitable and impactful.
-                  </p>
-                </div>
-
-                {/* Pull Quote */}
-                <div className="reveal mb-10" style={{ transitionDelay: "0.2s" }}>
-                  <blockquote className="pull-quote">
-                    "I value clarity, reliability, and small details that make digital products feel considerate. Good design is invisible , it just works."
-                  </blockquote>
-                </div>
-
-                {/* Interest Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {interests.map((item, i) => {
-                    const Icon = item.icon;
-                    return (
-                      <div
-                        key={item.title}
-                        className="reveal rounded-lg p-5"
-                        style={{
-                          transitionDelay: `${0.25 + i * 0.08}s`,
-                          background: "white",
-                          boxShadow: "0 4px 16px rgba(15,32,68,0.07)",
-                        }}
-                      >
-                        <div className="flex items-start gap-3">
-                          <div
-                            className="w-9 h-9 rounded flex items-center justify-center flex-shrink-0 mt-0.5"
-                            style={{ background: "rgba(245,158,11,0.12)" }}
-                          >
-                            <Icon size={18} style={{ color: "var(--amber)" }} />
-                          </div>
-                          <div>
-                            <h4
-                              className="font-bold mb-1 text-sm"
-                              style={{ fontFamily: "'Playfair Display', serif", color: "var(--navy)" }}
-                            >
-                              {item.title}
-                            </h4>
-                            <p
-                              className="text-sm leading-relaxed"
-                              style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
-                            >
-                              {item.text}
-                            </p>
-=======
                     I am particularly interested in how thoughtful interfaces can make complex systems feel simple and approachable. I enjoy working at the intersection of front-end engineering, user experience, and clean visual design. Outside of coursework, I explore side projects, read about product design, and quietly iterate on ideas until they feel cohesive. I value clarity, reliability, and small details that make digital products feel considerate.
                   </p>
                 </div>
@@ -307,7 +243,6 @@ export default function AboutMe() {
                                 {item.text}
                               </p>
                             </div>
->>>>>>> cf118cddfd24aba6a2158a1f0816b2afd5826984
                           </div>
                         </div>
                       );
