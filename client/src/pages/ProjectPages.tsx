@@ -124,9 +124,18 @@ const activities = [
     week: "Week 8",
     date: "Feb 24–28",
     title: "Final Report Draft & Heatmap Visualization",
-    status: "in-progress",
+    status: "complete",
     desc: "Completed full draft of final project report with comprehensive documentation of design process, findings, and recommendations. Contributed frontend development sections detailing UI/UX decisions, data visualization implementation, and accessibility features. Created interactive heatmap visualization showing food insecurity by zip code across Santa Clara County. Integrated heatmap with dashboard showing geographic distribution of food needs. Implemented backend API endpoints for data aggregation and filtering. Refined dashboard based on partner feedback: added demographic breakdowns, time-series trend analysis, and downloadable PDF reports. Connected frontend prototype with production backend API. Documented all technical decisions and created handoff documentation for Valley Verde staff.",
     deliverable: "Final Report Draft, Heatmap Visualization, Integrated Dashboard, API Documentation",
+  }
+  ,
+  {
+    week: "Week 9",
+    date: "Mar 2–6",
+    title: "Final Presentation",
+    status: "in-progress",
+    desc: "Delivered final presentation to class and Valley Verde staff, summarizing project outcomes, insights, and recommendations. Highlighted key findings from data analysis, demonstrated interactive dashboard and heatmap visualizations, and provided comprehensive handoff documentation for Valley Verde staff.",
+    deliverable: "Final Presentation Slides, Handoff Documentation, Dashboard Demonstration",
   }
 ];
 
