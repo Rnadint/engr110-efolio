@@ -15,9 +15,12 @@ import {
   Target,
   Users,
   Beaker,
+  FileText,
+  ExternalLink,
 } from "lucide-react";
 
 const PROJECT_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663400044455/bp2s8LMMAEXrBB76Y8qTTz/project-banner-VQ9vmScthMD38bFhUXyjB9.webp";
+const FINAL_REPORT_PATH = `${import.meta.env.BASE_URL}FinalProjectReport.pdf`;
 
 const subPages = [
   {
@@ -219,6 +222,56 @@ export default function ProjectOverview() {
                   </Link>
                 );
               })}
+            </div>
+
+            <div className="mt-10 reveal">
+              <a href={FINAL_REPORT_PATH} target="_blank" rel="noopener noreferrer">
+                <div
+                  className="card-hover rounded-lg overflow-hidden"
+                  style={{
+                    background: "white",
+                    boxShadow: "0 4px 20px rgba(15,32,68,0.07)",
+                    cursor: "pointer",
+                    border: "1px solid rgba(15,32,68,0.08)",
+                  }}
+                >
+                  <div className="flex items-center gap-6 p-6">
+                    <div
+                      className="flex-shrink-0 w-14 h-14 rounded flex items-center justify-center"
+                      style={{ background: "var(--navy)" }}
+                    >
+                      <FileText size={24} style={{ color: "var(--amber)" }} />
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      <h3
+                        className="font-bold mb-1"
+                        style={{
+                          fontFamily: "'Playfair Display', serif",
+                          fontSize: "1.2rem",
+                          color: "var(--navy)",
+                        }}
+                      >
+                        Final Project Report (PDF)
+                      </h3>
+                      <p
+                        className="text-sm leading-relaxed"
+                        style={{ color: "var(--slate)", fontFamily: "'Source Sans 3', sans-serif" }}
+                      >
+                        Open the complete final report document with project outcomes,
+                        implementation details, and recommendations.
+                      </p>
+                    </div>
+
+                    <div
+                      className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                      style={{ background: "rgba(245,158,11,0.1)" }}
+                    >
+                      <ExternalLink size={18} style={{ color: "var(--amber)" }} />
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

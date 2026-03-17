@@ -62,7 +62,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <WouterRouter hook={useHashLocation}>
+          <WouterRouter hook={useHashLocation} hrefs={(href) => `#${href}`}>
             <div className="flex flex-col min-h-screen">
               <Navigation />
               <main className="flex-1">
